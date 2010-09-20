@@ -1,0 +1,17 @@
+---
+layout: base
+---
+<div class="entry-content">
+  <h2 class="clear">
+    <a href="{{ post.url }}/" title="{{ post.title }}"> 
+      {{ page.title }}
+    </a><br/>
+    <span class="date">{{ page.date | date: '%d %b %Y' }}</span>
+  </h2>
+  <p>
+  {{ content}}
+  </p>
+  <a class="readmore" href="javascript: history.go(-1)" title="Return"> 
+  Return...
+  </a>
+</div> <!-- /.entry-content -->

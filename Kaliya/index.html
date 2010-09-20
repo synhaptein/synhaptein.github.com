@@ -1,8 +1,9 @@
 ---
 layout: base
-title: Synhaptein
+title: Kaliya JavaScript Distributed Computing Framework
 ---
-{% for post in site.categories.synhaptein limit:5 %}
+{% assign transaction = 'Kaliya' %}
+{% for post in site.categories.kaliyaPost limit:5 %}
   <div id="container">
     <div class="entry-content">
       <h2 class="clear">
@@ -20,10 +21,3 @@ title: Synhaptein
     </div> <!-- /.entry-content -->
   </div> <!-- /#container -->
 {% endfor %}
-<div class="codeblock">
-{% highlight scala %}
-class TemplateNotFoundException(mistake : String) extends Exception(mistake) {
-	def getError() : String = this.mistake
-}
-{% endhighlight %}
-</div>

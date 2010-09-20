@@ -1,0 +1,33 @@
+<div id="rightcol">
+<table class="rightmenu rounded_STYLE">
+	<tr>
+		<td class="rightmenutitle">
+		Scalator
+		</td>
+	</tr>
+	{% for post in site.categories.scalatorPost limit:5 %}
+    <tr>
+		<td>
+			<a href="{{ post.url }}/" title="{{ post.title }}"> {{ post.title }}</a>
+		</td>
+	</tr>
+	{% endfor %}
+</table>
+{% if(transaction != 'Kaliya') %}
+<table class="rightmenu rounded_STYLE">
+	<tr>
+		<td class="rightmenutitle">
+		Kaliya JSDC
+		</td>
+	</tr>
+	{% for post in site.categories.kaliyaPost limit:5 %}
+    <tr>
+		<td>
+			<a href="{{ post.url }}/" title="{{ post.title }}"> {{ post.title }}</a>
+		</td>
+	</tr>
+	{% endfor %}
+</table>
+{% endif %}
+<img style="margin-top:20px;padding-left:20%;" src="/images/browser.png"/>
+</div>
