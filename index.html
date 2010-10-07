@@ -2,6 +2,7 @@
 layout: base
 title: Synhaptein
 ---
+{% assign transaction = 'Synhaptein' %}
 {% for post in site.categories.synhaptein limit:5 %}
   <div id="container">
     <div class="entry-content">
@@ -9,10 +10,10 @@ title: Synhaptein
         <a href="{{ post.url }}" title="{{ post.title }}"> 
           {{ post.title }}
         </a><br/>
-        <span class="date">{{ post.date | date: '%d %b %Y' }}</span>
+        <span class="date">{{ post.date | date: '%b. %d, %Y' }}</span>
       </h2>
       <p>
-      {{ post.content | truncate : 500}}
+      {{ post.content }}
       </p>
       <a class="readmore" href="{{ post.url }}" title="{{ post.title }}"> 
           Read more...
@@ -20,10 +21,3 @@ title: Synhaptein
     </div> <!-- /.entry-content -->
   </div> <!-- /#container -->
 {% endfor %}
-<div class="codeblock">
-{% highlight scala %}
-class TemplateNotFoundException(mistake : String) extends Exception(mistake) {
-	def getError() : String = this.mistake
-}
-{% endhighlight %}
-</div>

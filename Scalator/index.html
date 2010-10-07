@@ -1,7 +1,10 @@
 ---
 layout: base
-title: Synhaptein
+title: Scalator web framework for Scala
 ---
+{% assign transaction = 'Scalator' %}
+<h2>Scalator</h2>
+{% include scalator.html %}
 {% for post in site.categories.scalatorPost limit:5 %}
   <div id="container">
     <div class="entry-content">
@@ -9,10 +12,10 @@ title: Synhaptein
         <a href="{{ post.url }}" title="{{ post.title }}"> 
           {{ post.title }}
         </a><br/>
-        <span class="date">{{ post.date | date: '%d %b %Y' }}</span>
+        <span class="date">{{ post.date | date: '%b. %d, %Y' }}</span>
       </h2>
       <p>
-      {{ post.content | truncate : 500}}
+      {{ post.content }}
       </p>
       <a class="readmore" href="{{ post.url }}" title="{{ post.title }}"> 
           Read more...

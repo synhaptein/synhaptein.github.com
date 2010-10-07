@@ -5,3 +5,11 @@ categories:
 - kaliyaPost
 ---
 Working on it...
+
+<div class="codeblock">
+{% highlight scala %}
+class TemplateNotFoundException(mistake : String) extends Exception(mistake) {
+	def getError() : String = this.mistake
+}
+{% endhighlight %}
+</div>

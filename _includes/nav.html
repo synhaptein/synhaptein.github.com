@@ -1,5 +1,19 @@
 <div id="rightcol">
-<table class="rightmenu rounded_STYLE">
+<table>
+	<tr>
+		<td class="rightmenutitle">
+		SynHaptein
+		</td>
+	</tr>
+	{% for post in site.categories.synhaptein limit:5 %}
+    <tr>
+		<td>
+			<a href="{{ post.url }}" title="{{ post.title }}"> {{ post.title }}</a>
+		</td>
+	</tr>
+	{% endfor %}
+</table>
+<table>
 	<tr>
 		<td class="rightmenutitle">
 		Scalator
@@ -13,11 +27,10 @@
 	</tr>
 	{% endfor %}
 </table>
-{% if(transaction != 'Kaliya') %}
-<table class="rightmenu rounded_STYLE">
+<table>
 	<tr>
 		<td class="rightmenutitle">
-		Kaliya JSDC
+		Kaliya
 		</td>
 	</tr>
 	{% for post in site.categories.kaliyaPost limit:5 %}
@@ -28,6 +41,5 @@
 	</tr>
 	{% endfor %}
 </table>
-{% endif %}
-<img style="margin-top:20px;padding-left:20%;" src="/images/browser.png"/>
+<img style="margin-top:20px" src="/images/browser.png"/>
 </div>

@@ -3,6 +3,8 @@ layout: base
 title: Kaliya JavaScript Distributed Computing Framework
 ---
 {% assign transaction = 'Kaliya' %}
+<h2>Kaliya</h2>
+{% include kaliya.html %}
 {% for post in site.categories.kaliyaPost limit:5 %}
   <div id="container">
     <div class="entry-content">
@@ -10,10 +12,10 @@ title: Kaliya JavaScript Distributed Computing Framework
         <a href="{{ post.url }}" title="{{ post.title }}"> 
           {{ post.title }}
         </a><br/>
-        <span class="date">{{ post.date | date: '%d %b %Y' }}</span>
+        <span class="date">{{ post.date | date: '%b. %d, %Y' }}</span>
       </h2>
       <p>
-      {{ post.content | truncate : 500}}
+      {{ post.content }}
       </p>
       <a class="readmore" href="{{ post.url }}" title="{{ post.title }}"> 
           Read more...

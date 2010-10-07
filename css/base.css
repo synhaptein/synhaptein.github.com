@@ -32,9 +32,12 @@ body{
 .linkmenu:active {color:#1d7fb3; text-decoration: none;}
 
 #maincol{ 
- width:70%; 
+ width:60%; 
  text-align:left;  
- margin-left:10%; 
+ margin-left:10%;
+ min-height:300px;
+ height:auto !important;
+ height:300px; 
 } 
 
 #rightcol{
@@ -51,6 +54,11 @@ body{
  padding-top:30px;
  text-align:center;
 } 
+
+#lastUpdate {
+ color:#838483;
+ font-size:8px;
+}
 
 a:link {color:#131313; text-decoration: none;} 
 a:visited {color:#131313; text-decoration: none;} 
@@ -80,17 +88,12 @@ a:active {color:#1d7fb3; text-decoration: none;}
 .rightmenutitle {
  height:29px; 
  width:100%;
- text-align:center;
+ text-align:left;
+ border-bottom:solid;
+ border-width:1px;
+ border-color:#838483;
  color: #131313;
  font-weight:bold;
-}
-
-.rounded_STYLE
-{
- background-color:#eff0f2;	
- border: 0px;
- -webkit-border-radius: 20px;
- -moz-border-radius: 20px;
 }
 
 .rightmenu {
