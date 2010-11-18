@@ -7,10 +7,10 @@ title: Scalator web framework for Scala
 {% include scalator.html %}
 <div id="url_box" class="url-box"> 
  <ul class="clone-urls"> 
-     <li id="http_clone_url"><a href="#" onclick="document.getElementById('url_field').value = 'https://github.com/synhaptein/Scalator.git';">HTTP</a></li>
-     <li id="public_clone_url"><a href="#" onclick="document.getElementById('url_field').value = 'git://github.com/synhaptein/Scalator.git';">Git Read-Only</a></li>  
+     <li id="http_clone_url"><span onclick="document.getElementById('url_field').value = 'https://github.com/synhaptein/Scalator.git';">HTTP</a></li>
+     <li id="public_clone_url"><span onclick="document.getElementById('url_field').value = 'git://github.com/synhaptein/Scalator.git';">Git Read-Only</a></li>  
  </ul> 
- <input type="text" spellcheck="false" id="url_field" class="url-field" value="https://github.com/synhaptein/Scalator.git"/> 
+ <input type="text" spellcheck="false" id="url_field" class="url-field" readonly="readonly" value="https://github.com/synhaptein/Scalator.git"/> 
  <span style="display:none" id="url_box_clippy"></span> 
 </div> 
 {% for post in site.categories.scalatorPost limit:5 %}
