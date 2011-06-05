@@ -50,9 +50,13 @@ p {
  display:inline; 
  position: relative; 
  width:20%;
+ height:100%;
 }
  
 #footer{
+ float:right;
+ position:absolute;
+ left:40%;
  height:100px; 
  padding-top:30px;
  text-align:center;
