@@ -1,0 +1,14 @@
+---
+layout: post
+title: Scalator 0.1 release
+categories: 
+- synhaptein
+- scalatorPost
+---
+Here is the first scalator release! It provides a very basic MVC framework that provides: 
+<ul>
+<li>Direct mapping of URL => controller class</li>
+<li>Templating by extending controller class</li>
+<li>Three type of views like scalate, redirection and error</li>
+<li>Use the default tomcat error page or you can render a scalate view with a custom error page</li>
+</ul>

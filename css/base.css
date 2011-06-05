@@ -10,6 +10,10 @@ body{
  width: 100%; 
  height: 100%;
 } 
+
+p {
+ text-align:justify;	
+}
  
 #header{
  position:relative; 
@@ -50,7 +54,6 @@ body{
  
 #footer{
  height:100px; 
- background:url(/images/footer.gif) no-repeat center 20px;
  padding-top:30px;
  text-align:center;
 } 
@@ -58,6 +61,10 @@ body{
 #lastUpdate {
  color:#838483;
  font-size:8px;
+}
+
+#postlist {
+ margin-top:60px;	
 }
 
 a:link {color:#131313; text-decoration: none;} 
@@ -71,6 +78,7 @@ a:active {color:#1d7fb3; text-decoration: none;}
  border-color:#afc2d1;
  background-color:#eff0f2;	
  padding-left:10px;
+ padding-right:10px;
  margin-top:10px;
 }
 
