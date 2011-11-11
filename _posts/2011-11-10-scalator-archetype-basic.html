@@ -1,0 +1,29 @@
+---
+layout: post
+title: Scalator-archetype-basic update
+categories: 
+- scalatorPost
+---
+Here is an updated snapshot of the basic archetype that work with the latest scalator development.
+
+<p>Create a new project:</p>
+<div class="codeblock">
+{% highlight bash %}
+mvn archetype:generate -U \
+   -DarchetypeGroupId=com.synhaptein \
+   -DarchetypeArtifactId=scalator-archetype-basic \
+   -DarchetypeVersion=0.3-SNAPSHOT \
+   -DarchetypeRepository=http://scala-tools.org/repo-snapshots \
+   -DremoteRepositories=http://scala-tools.org/repo-snapshots \
+   -DgroupId=com.example.testweb -DartifactId=testweb
+{% endhighlight %}
+</div>
+
+<p>Run the helloworld:</p>
+<div class="codeblock">
+{% highlight bash %}
+maven jetty:run
+{% endhighlight %}
+</div>
+
+<p>Now you should be able to connect to <a class="readmore" href="http://localhost:8080/testweb/">http://localhost:8080/testweb/</a></p>
