@@ -6,14 +6,14 @@ title: Kaliya Getting Started
 <h2>Getting Started with Kaliya</h2>
 <h3>Introduction</h3>
 <p>
-First of all you should know about mapreduce, if not, I suggest you to read at least this blog entry
+First of all, you should know about mapreduce, if not, I suggest you to read at least this blog entry
 <a class="readmore" href="http://www.dashdashverbose.com/2009/01/mapreduce-with-javascript.html">MapReduce with JavaScript</a> from Sean at --verbose 
 and <a class="readmore" href="http://labs.google.com/papers/mapreduce.html">MapReduce: Simplified Data Processing on Large Clusters</a> 
-from Google Research Publications. You will see that the reverse indexer example is based on Sean word count example.
+from Google Research Publications. You will see that the reverse indexer example is based on Sean's word count example.
 </p>
 <h3>Installation</h3>
 <p>
-Now it's time to retreive kaliya from github:
+Now it's time to retrieve kaliya from github:
 </p>
 <div class="codeblock">
 {% highlight bash %}
@@ -30,12 +30,12 @@ Now you should be able to access the management console at this address <span cl
 </p>
 <p>
 To test the beast, you could add a reverseIndexer job or a md5cracker job (I suggest a word of 3 or 4 characters if you do not want to 
-wait to much!) and then connect some browsers to <span class="codeblock">http://localhost:8080/</span>. If nothing
+wait too much!) and then connect some browsers to <span class="codeblock">http://localhost:8080/</span>. If nothing
 goes wrong, you should see your job being done by your army of browser trying to break your md5 hashes!
 </p>
 <h3>The reverse indexer example</h3>
 <p>
-There is two parts in a job:
+There are two parts in a job:
 </p>
 <ul>
 <li>The java part that feeds the mapreduce engine with an iterator and contains the results.</li>
@@ -84,7 +84,7 @@ public class ReverseIndexer extends Job<String, String, List<String>> {
 
     public void initMapReducer(MapReducer<String, String, List<String>> p_mapReducer) {
         //p_mapReducer.setStopOnFirstMap();
-        // This option is not useful for this type of job. It is useful for bruteforcing.
+        // This option is not useful for this type of job. It is useful for brute forcing.
     }
 
     public Iterator<Pair<String, String>> getIterator() {
@@ -94,9 +94,9 @@ public class ReverseIndexer extends Job<String, String, List<String>> {
 {% endhighlight %}
 </div>
 <p>
-The most important part is the getIterator() function, the mapreduce engine will iterate on it and
+The most important part is the getIterator() function. The mapreduce engine will iterate on it and
 send each entry to an idle worker. The second important thing is the class Job that is extended.
-There is three types in a job:
+There are three types in a job:
 </p> 
 <ul>
 <li>List&lt;Pair&lt;String, T1&gt;&gt; where T1 is the input type of the map function.</li> 
@@ -105,7 +105,7 @@ There is three types in a job:
 </ul>
 
 <p>
-So a new job have to extends Job&lt;T1, T2, T3&gt; or JobMapOnly&lt;T1, T2&gt; if the job does not
+So a new job has to extend Job&lt;T1, T2, T3&gt; or JobMapOnly&lt;T1, T2&gt; if the job does not
 have to do a reduce.
 </p>
 
@@ -146,12 +146,12 @@ function normalizeText(s) {
 </div>
 <h3>Conclusion</h3>
 <p>
-It is now easy to distribute jobs on a bunch of computers without any additional software. There is a lot of enhancements that could be
+It is now easy to distribute jobs on a bunch of computers without any additional software. There are a lot of enhancements that could be
 done to Kaliya like those: 
 </p>
 <ul>
 <li>stop/pause/resume a single job</li> 
-<li>recover a task when a worker is disconnected or an error occured</li>
+<li>recovered a task when a worker is disconnected or an error occured</li>
 <li>statistics on a job like time, task speed...</li>
 </ul>
 <p>

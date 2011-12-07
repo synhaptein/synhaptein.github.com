@@ -1,0 +1,115 @@
+---
+layout: base
+title: Scalator Bootstrap
+---
+{% assign transaction = 'Scalator' %}
+<h2>Bootstrap</h2>
+<p>
+The bootstrap is all about CoreApp.scala. It allows to initialize modules when the application starts.
+</p>
+<h3>Controllers package</h3>
+<p>
+The most important thing is to configure the controller package.
+</p>
+<div class="codeblock">
+{% highlight scala %}
+package com.example.testweb
+
+import com.synhaptein.scalator.WebApp
+import com.synhaptein.scalator.context.Context
+
+class CoreApp extends WebApp
+{
+  override def bootstrap() = {
+    setControllerPackage("com.example.yourapp.controllers")
+    // Put everything that need to be initialized here.
+  }
+
+  override def destroy() = {
+    //Put everything that must be destroy when the webapp is stoped.	
+  }
+}
+{% endhighlight %}
+</div>
+
+<h3>Url handler</h3>
+<p>
+This is a more advanced feature, but if you want to modify or filter request's url before it gets transformed to a RequestContainer, use an UrlHandler.
+In the example, the ResourcesHandler could throw ErrorViewException("404") if the url doesn't exist. You could also throw a FilterChainException to
+return the control to the next filter.
+</p>
+<div class="codeblock">
+{% highlight scala %}
+package com.example.testweb
+
+import com.synhaptein.scalator.WebApp
+import com.synhaptein.scalator.context.Context
+import javax.servlet.{FilterConfig, FilterChain}
+import com.synhaptein.scalator.handlers.UrlHandler
+
+class CoreApp extends WebApp
+{
+  override def bootstrap() = {
+    setControllerPackage("com.example.yourapp.controllers")
+    
+    registerUrlHandler(new ResourcesHandler)
+    
+    // Put everything that need to be initialized here.
+  }
+
+  override def destroy() = {
+    // Put everything that must be destroy when the webapp is stoped.	
+  }
+}
+
+class ResourcesHandler extends UrlHandler
+{
+  override def handle(filterConfig: FilterConfig, url: String, context: Context, chain: FilterChain): String = {
+    
+    // url is the original request and you return something different or you throw an exception
+    // You can throw ErrorViewException and FilterChainException
+
+    url
+  }
+}
+{% endhighlight %}
+</div>
+
+<h3>Request handler</h3>
+<p>
+This is a more advanced feature, but if you need to modify or filter a request with the RequestContainer, that's the way to do it. In this
+example, the security handler could read the annotation on a function and throw an ErrorViewException("403") to redirect to the 403 error page.
+</p>
+<div class="codeblock">
+{% highlight scala %}
+package com.example.testweb
+
+import com.synhaptein.scalator.context.Context
+import javax.servlet.FilterConfig
+import com.synhaptein.scalator.handlers.RequestHandler
+import com.synhaptein.scalator.{RequestContainer, WebApp}
+
+class CoreApp extends WebApp
+{
+  override def bootstrap() = {
+    setControllerPackage("com.example.yourapp.controllers")
+    
+    registerRequestHandler(new SecurityHandler)
+    
+    // Put everything that need to be initialized here.
+  }
+
+  override def destroy() = {
+    // Put everything that must be destroy when the webapp is stoped.	
+  }
+}
+
+class SecurityHandler extends RequestHandler
+{
+  def handle(filterConfig: FilterConfig, url: String, context: Context, requestContainer: RequestContainer): Unit = {
+    // Here you have access to the request container that contains the class/method
+    // You can throw ErrorViewException and FilterChainException
+  }
+}
+{% endhighlight %}
+</div>

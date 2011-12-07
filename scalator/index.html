@@ -13,6 +13,18 @@ title: Scalator web framework for Scala
  <input type="text" spellcheck="false" id="url_field" class="url-field" readonly="readonly" value="https://github.com/synhaptein/scalator.git"/> 
  <span style="display:none" id="url_box_clippy"></span> 
 </div>
+
+<h3>Documentation</h3>
+<ul>
+<li><a class="readmore" href="gettingstarted.html" title="Getting Started">Getting started</a></li>
+<li><a class="readmore" href="bootstrap.html" title="Bootstrap">Bootstrap</a></li>
+<!--li><a class="readmore" href="controllers.html" title="Controllers">Controllers</a></li>
+<li><a class="readmore" href="views.html" title="Views">Views</a></li>
+<li><a class="readmore" href="resources.html" title="Static resources">Static resources</a></li>
+<li><a class="readmore" href="security.html" title="Security">Security</a></li>
+<li><a class="readmore" href="javascript.html" title="Javascript">Javascript tools</a></li-->
+</ul>
+
 <div id="postlist"> 
 {% for post in site.categories.scalatorPost limit:5 %}
   <div id="container">
@@ -26,9 +38,6 @@ title: Scalator web framework for Scala
       <p>
       {{ post.content }}
       </p>
-      <a class="readmore" href="{{ post.url }}" title="{{ post.title }}"> 
-          Read more...
-      </a>
     </div> <!-- /.entry-content -->
   </div> <!-- /#container -->
 {% endfor %}
