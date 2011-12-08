@@ -2,13 +2,13 @@
 <table>
 	<tr>
 		<td class="rightmenutitle">
-		<a href="/" title="SynHaptein">SynHaptein</a>
+		<a class="title" href="/" title="SynHaptein">SynHaptein</a>
 		</td>
 	</tr>
 	{% for post in site.categories.synhaptein limit:5 %}
     <tr>
 		<td>
-			<a href="{{ post.url }}" title="{{ post.title }}"> {{ post.title }}</a>
+			<a class="title" href="{{ post.url }}" title="{{ post.title }}"> {{ post.title }}</a>
 		</td>
 	</tr>
 	{% endfor %}
@@ -16,13 +16,13 @@
 <table>
 	<tr>
 		<td class="rightmenutitle">
-		<a href="/scalator" title="Scalator">Scalator</a>
+		<a class="title" href="/scalator" title="Scalator">Scalator</a>
 		</td>
 	</tr>
 	{% for post in site.categories.scalatorPost limit:5 %}
     <tr>
 		<td>
-			<a href="{{ post.url }}" title="{{ post.title }}"> {{ post.title }}</a>
+			<a class="title" href="{{ post.url }}" title="{{ post.title }}"> {{ post.title }}</a>
 		</td>
 	</tr>
 	{% endfor %}
@@ -30,13 +30,13 @@
 <table>
 	<tr>
 		<td class="rightmenutitle">
-		<a href="/kaliya" title="Kaliya">Kaliya</a>
+		<a class="title" href="/kaliya" title="Kaliya">Kaliya</a>
 		</td>
 	</tr>
 	{% for post in site.categories.kaliyaPost limit:5 %}
     <tr>
 		<td>
-			<a href="{{ post.url }}" title="{{ post.title }}"> {{ post.title }}</a>
+			<a class="title" href="{{ post.url }}" title="{{ post.title }}"> {{ post.title }}</a>
 		</td>
 	</tr>
 	{% endfor %}

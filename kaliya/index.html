@@ -3,7 +3,7 @@ layout: base
 title: Kaliya JavaScript Distributed Computing Framework
 ---
 {% assign transaction = 'Kaliya' %}
-<h2>Kaliya</h2>
+<h2 class="title">Kaliya</h2>
 {% include kaliya.html %}
 <div id="url_box" class="url-box"> 
  <ul class="clone-urls"> 
@@ -14,14 +14,14 @@ title: Kaliya JavaScript Distributed Computing Framework
  <span style="display:none" id="url_box_clippy"></span> 
 </div>
 <ul>
-<li><a class="readmore" href="gettingstarted.html" title="Getting Started">Getting Started</a></li>
+<li><a href="gettingstarted.html" title="Getting Started">Getting Started</a></li>
 </ul>
 <div id="postlist">
 {% for post in site.categories.kaliyaPost limit:5 %}
   <div id="container">
     <div class="entry-content">
       <h2 class="clear">
-        <a href="{{ post.url }}" title="{{ post.title }}"> 
+        <a class="title" href="{{ post.url }}" title="{{ post.title }}"> 
           {{ post.title }}
         </a><br/>
         <span class="date">{{ post.date | date: '%b. %d, %Y' }}</span>

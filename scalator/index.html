@@ -3,7 +3,7 @@ layout: base
 title: Scalator web framework for Scala
 ---
 {% assign transaction = 'Scalator' %}
-<h2>Scalator</h2>
+<h2 class="title">Scalator</h2>
 {% include scalator.html %}
 <div id="url_box" class="url-box"> 
  <ul class="clone-urls"> 
@@ -14,15 +14,15 @@ title: Scalator web framework for Scala
  <span style="display:none" id="url_box_clippy"></span> 
 </div>
 
-<h3>Documentation</h3>
+<h3 class="title">Documentation</h3>
 <ul>
-<li><a class="readmore" href="gettingstarted.html" title="Getting Started">Getting started</a></li>
-<li><a class="readmore" href="bootstrap.html" title="Bootstrap">Bootstrap</a></li>
-<!--li><a class="readmore" href="controllers.html" title="Controllers">Controllers</a></li>
-<li><a class="readmore" href="views.html" title="Views">Views</a></li>
-<li><a class="readmore" href="resources.html" title="Static resources">Static resources</a></li>
-<li><a class="readmore" href="security.html" title="Security">Security</a></li>
-<li><a class="readmore" href="javascript.html" title="Javascript">Javascript tools</a></li-->
+<li><a href="gettingstarted.html" title="Getting Started">Getting started</a></li>
+<li><a href="bootstrap.html" title="Bootstrap">Bootstrap</a></li>
+<!--li><a href="controllers.html" title="Controllers">Controllers</a></li>
+<li><a href="views.html" title="Views">Views</a></li>
+<li><a href="resources.html" title="Static resources">Static resources</a></li>
+<li><a href="security.html" title="Security">Security</a></li>
+<li><a href="javascript.html" title="Javascript">Javascript tools</a></li-->
 </ul>
 
 <div id="postlist"> 
@@ -30,7 +30,7 @@ title: Scalator web framework for Scala
   <div id="container">
     <div class="entry-content">
       <h2 class="clear">
-        <a href="{{ post.url }}" title="{{ post.title }}"> 
+        <a class="title" href="{{ post.url }}" title="{{ post.title }}"> 
           {{ post.title }}
         </a><br/>
         <span class="date">{{ post.date | date: '%b. %d, %Y' }}</span>
