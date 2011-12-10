@@ -58,9 +58,9 @@ p {
 }
  
 #footer{
- float:right;
- position:absolute;
- left:40%;
+ position:relative;
+ margin-left:auto;
+ margin-right:auto;
  height:100px; 
  padding-top:30px;
  text-align:center;
@@ -85,6 +85,7 @@ a:active {color:#484848; text-decoration: none;}
 }
 
 .codeblock {
+ overflow-x: auto;
  border-width:1px;
  border-style:dashed;
  border-color:#afc2d1;
