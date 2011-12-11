@@ -137,6 +137,10 @@ hr {
  margin-left:10%
 }
 
+//DISQUS
+
+#dsq-content div, #dsq-content p, #dsq-content h3 { clear:none !important; }
+
 //GITHUB
 
 ul.clone-urls{margin:0;}
