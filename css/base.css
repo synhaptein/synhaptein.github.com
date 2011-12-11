@@ -140,6 +140,7 @@ hr {
 //DISQUS
 
 #dsq-content div, #dsq-content p, #dsq-content h3 { clear:none !important; }
+#dsq-content { overflow:auto !important; }
 
 //GITHUB
 
