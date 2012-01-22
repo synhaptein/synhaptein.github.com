@@ -3,7 +3,7 @@ layout: base
 title: Synhaptein
 ---
 {% assign transaction = 'Synhaptein' %}
-{% for post in site.categories.synhaptein limit:5 %}
+{% for post in paginator.posts %}
   <div id="container">
     <div class="entry-content">
       <h2>
@@ -18,3 +18,11 @@ title: Synhaptein
     </div>
   </div>
 {% endfor %}
+{% if paginator.previous_page == 1 %}
+    <span id="newer"><a href="/">&laquo;&laquo; Newer Entries</a></span>
+{% elsif paginator.previous_page %}
+    <span id="newer"><a href="/page{{ paginator.previous_page }}">&laquo;&laquo; Newer Entries</a></span>
+{% endif %}
+{% if paginator.next_page %}
+    <span id="older"><a href="/page{{ paginator.next_page }}">Older Entries &raquo;&raquo;</a></span>
+{% endif %}

@@ -80,6 +80,13 @@ a:visited {color:#1d7fb3; text-decoration: none;}
 a:hover {color:#484848; text-decoration: none;} 
 a:active {color:#484848; text-decoration: none;} 
 
+#newer {
+}
+
+#older {
+ float:right;
+}
+
 hr {
  margin-top:30px;
  margin-bottom:30px;

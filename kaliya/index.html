@@ -16,20 +16,3 @@ title: Kaliya JavaScript Distributed Computing Framework
 <ul>
 <li><a href="gettingstarted.html" title="Getting Started">Getting Started</a></li>
 </ul>
-<div id="postlist">
-{% for post in site.categories.kaliyaPost limit:5 %}
-  <div id="container">
-    <div class="entry-content">
-      <h2>
-        <a class="title" href="{{ post.url }}" title="{{ post.title }}"> 
-          {{ post.title }}
-        </a><br/>
-        <span class="date">{{ post.date | date: '%b. %d, %Y' }}</span>
-      </h2>
-      <p>
-      {{ post.content }}
-      </p>
-    </div>
-  </div>
-{% endfor %}
-</div>
