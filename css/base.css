@@ -148,6 +148,11 @@ h1, h2, h3 {
  margin-left:10%
 }
 
+.important {
+ font-weight:bold;
+ color:#484848;
+}
+
 //DISQUS
 
 #dsq-content div, #dsq-content p, #dsq-content h3 { clear:none !important; }
