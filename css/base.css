@@ -2,9 +2,10 @@ body{
  background-color:#FFFFFF;
  background-image:url(/images/header.png);
  background-repeat: repeat-x;
- color:#000000;
- font-family: verdana, helvetica;
- font-size:12px;
+ color:#1d1d1d;
+ font-family: 'PT Serif', serif;
+ line-height: 1.5em;
+ font-size:16px;
  margin: 0px; 
  padding: 0px; 
  width: 100%; 
@@ -22,22 +23,26 @@ p {
 } 
 
 #menu{
- height:30px; 
+ height:38px;
  width:90%;
  padding-left:10%;
- background-color:#3D3D3D;
- color: #CCCCCC;
+ background-color: #333333;
+ color: #dcdcdc;
 }
 
 #menu td {
- padding-top:5px;
- padding-bottom:5px;
+ text-align: center;
 }
 
 #menu a:link {color:#dddddd; text-decoration: none;} 
 #menu a:visited {color:#dddddd; text-decoration: none;} 
 #menu a:active {color:#1d7fb3; text-decoration: none;}
-.linkmenu:hover {background-color:#4F4F4F; text-decoration: none;} 
+
+.linkmenu {
+ padding:5px;
+}
+
+.linkmenu:hover {background-color:#4F4F4F; text-decoration: none;}
 
 #maincol{ 
  width:60%; 
@@ -55,6 +60,10 @@ p {
  position: relative; 
  width:25%;
  height:100%;
+}
+
+#rightcol table {
+ margin-bottom: 20px;
 }
  
 #footer{
@@ -96,14 +105,16 @@ hr {
 }
 
 h1, h2, h3 {
- color:#484848;
+ color: #1d1d1d;
 }
 
 .title {
- color:#484848;
+ color: #1d1d1d;
 }
 
 .codeblock {
+ font-size:12px;
+ line-height: 1em;
  overflow-x: auto;
  border-width:1px;
  border-style:dashed;
@@ -115,13 +126,13 @@ h1, h2, h3 {
 }
 
 .date {
- color:#838483;	
+ color: #6a6b6a;
  font-family: verdana, helvetica;
  font-size:10px;
 }
 
-.title:link {color:#484848; text-decoration: none;}
-.title:visited {color:#484848; text-decoration: none;} 
+.title:link {color:#1d1d1d; text-decoration: none;}
+.title:visited {color:#1d1d1d; text-decoration: none;}
 .title:hover {color:#1d7fb3; text-decoration: none;} 
 .title:active {color:#1d7fb3; text-decoration: none;} 
 
@@ -132,7 +143,7 @@ h1, h2, h3 {
  border-bottom:solid;
  border-width:1px;
  border-color:#EBEBEB;
- color: #484848;
+ color: #1d1d1d;
  font-weight:bold;
 }
 
@@ -150,7 +161,7 @@ h1, h2, h3 {
 
 .important {
  font-weight:bold;
- color:#484848;
+ color: #1d1d1d;
 }
 
 //DISQUS
