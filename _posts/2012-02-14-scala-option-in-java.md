@@ -8,10 +8,9 @@ description:
 
 Scala on valentine's day is still awesome! I was doing some standard java development today and it remembered me a guy who use a custom implementation
 of scala option in java because he really missed it (I must admitted, I was in the same mood). I google it and found some interesting simple implementation. Here's
-what I did on my side based on <a href="http://www.codecommit.com/blog/scala/the-option-pattern">The “Option” Pattern</a>.
+what I did on my side based on [The “Option” Pattern](http://www.codecommit.com/blog/scala/the-option-pattern).
 
-<div class="codeblock">
-{% highlight java %}
+``` java
 package com.synhaptein;
 
 public abstract class Option<T> implements Iterable<T> {
@@ -23,11 +22,9 @@ public abstract class Option<T> implements Iterable<T> {
   public abstract T get();
   public abstract T getOrElse(T p_value);
 }
-{% endhighlight %}
-</div>
+```
 
-<div class="codeblock">
-{% highlight java %}
+``` java
 package com.synhaptein;
 
 import java.util.ArrayList;
@@ -57,11 +54,9 @@ public class Some<T> extends Option<T>  {
     return m_value;
   }
 }
-{% endhighlight %}
-</div>
+```
 
-<div class="codeblock">
-{% highlight java %}
+``` java
 package com.synhaptein;
 
 import java.util.Collections;
@@ -80,16 +75,12 @@ public class None<T> extends Option<T> {
     return p_value;
   }
 }
-{% endhighlight %}
-</div>
+```
 
-<p>
-Here's my personal addition: import static! It removes the need of adding new Some&lt;T&gt; or new None&lt;T&gt; so it feels more
+Here's my personal addition: import static! It removes the need of adding new Some<T> or new None<T> so it feels more
 like scala. The downside is that None is not typed with T… but it's not null!
-</p>
 
-<div class="codeblock">
-{% highlight java %}
+``` java
 package com.synhaptein;
 import static com.synhaptein.Option.*;
 
@@ -118,5 +109,4 @@ public class OptionTests {
     }
   }
 }
-{% endhighlight %}
-</div>
+```
