@@ -1,1 +1,40 @@
-paginate: 5
+# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
+
+paginate: 5 # pagination based on number of posts
+paginate_path: "page:num"
+exclude: ["README.md"] # files to exclude
+highlighter: pygments
+markdown: kramdown
+site.disqus: synhaptein
+google_analytics: UA-18895511-1
+
+defaults:
+  -
+    scope:
+      path: "" # empty string for all files
+    values:
+      title: p15x
+
+description: p15x personal blog
+author:
+  name: Philippe L'Heureux
+  email: phil@p15x.com
+  github: synhaptein
+  twitter: philippelh
+  linkedin: philippelheureux
+  bio: Interested in Startups, Scala, Signal Processing, OpenSource in general and damn good music!
+  email_md5: 21f266e03f7fd850f63dbf2fd6dbe112
+
+rss_path: feed.xml
+categories_path: categories.html
+tags_path: tags.html
+
+page.comments: true
+
+# set it as url of an image
+# sidebar_background_image: https://www.dropbox.com/s/g9h23zrycedxtk5/sky.png?raw=1
+
+BASE_PATH:
+
+gems:
+  - jekyll-paginate
