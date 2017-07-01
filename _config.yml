@@ -9,7 +9,7 @@
 title: p15x
 email: phil@p15x.com
 description: >
-  Awesome site description here
+  Knock knock. Race condition. Who's there?
 logo: "/assets/images/logo.png"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://p15x.com" # the base hostname & protocol for your site
