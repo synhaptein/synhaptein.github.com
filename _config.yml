@@ -1,40 +1,36 @@
-# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
+# Welcome to Amplified for Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-paginate: 5 # pagination based on number of posts
-paginate_path: "page:num"
-exclude: ["README.md"] # files to exclude
-highlighter: rouge
+# Site settings
+title: p15x
+email: phil@p15x.com
+description: >
+  Awesome site description here
+logo: "/assets/images/logo.png"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://p15x.com" # the base hostname & protocol for your site
+paginate:	5 # The number of posts to show per page on your homepage
+
+name: "Philippe L'Heureux"
+bio: >
+  Interested in Machine Learning, Scala, Haskell, Signal Processing and damn good music!
+
+author_image: "/assets/images/author.jpg"
+twitter_username: philippelh
+github_username:  synhaptein
+
+# Google Analytics
+analytics_id: "UA-18895511-1"
+
+# Build settings
 markdown: kramdown
-site.disqus: synhaptein
-google_analytics: UA-18895511-1
 
-defaults:
-  -
-    scope:
-      path: "" # empty string for all files
-    values:
-      title: p15x
-
-description: p15x personal blog
-author:
-  name: Philippe L'Heureux
-  email: phil@p15x.com
-  github: synhaptein
-  twitter: philippelh
-  linkedin: philippelheureux
-  bio: Interested in Machine Learning, Scala, Haskell, Signal Processing and damn good music!
-  email_md5: 21f266e03f7fd850f63dbf2fd6dbe112
-
-rss_path: feed.xml
-categories_path: categories.html
-tags_path: tags.html
-
-page.comments: true
-
-# set it as url of an image
-# sidebar_background_image: https://www.dropbox.com/s/g9h23zrycedxtk5/sky.png?raw=1
-
-BASE_PATH:
+kramdown:
+  parse_block_html: true
 
 gems:
   - jekyll-paginate

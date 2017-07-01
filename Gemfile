@@ -1,8 +1,5 @@
 source 'https://rubygems.org'
+
 gem 'jekyll'
-
-group :jekyll_plugins do
-  gem "jekyll-paginate"
-  gem "pygments.rb"
-end
-
+gem 'jekyll-paginate'
+gem 'jekyll-compose', group: [:jekyll_plugins]
